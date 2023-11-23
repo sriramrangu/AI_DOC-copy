@@ -1,4 +1,3 @@
-{/* <script src="https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js"></script> */ }
 function getRecommendation() {
     // You can add your recommendation logic here
     // For this example, let's just display a static recommendation
