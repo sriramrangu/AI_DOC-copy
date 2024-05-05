@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,37 +8,159 @@
   <link rel="icon" type="x-icon" href="Images/website-logo.png">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+  <!-- Nav Bar  -->
+  <nav>
+    <div class="logo">
+      <h4>AI Doctor</h4>
+    </div>
+    <ul class="nav-links">
+      <li><a style="color: blueviolet;" href="#">Home</a></li>
+      <div class="login-page" id="id01">
+        <li><a style="color: blueviolet;" href="loginpage.html">Log In</a></li>
+      </div>
+      <li><a style="color: blueviolet;" href="#">Medicine</a></li>
+      <li><a style="color: blueviolet;" href="#">About</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <!-- ---------- -->
+  </nav>
   <div id="recommendation-container">
     <h2>Medication Recommendation System</h2>
     <input type="text" id="medication-input" placeholder="Enter your symptoms...">
-    <button id="recommendation-button" onclick="getRecommendation()">Get Recommendation</button>
-    <button id="voice-input-button" onclick="startVoiceInput()">Voice Input</button>
-    <!-- New button for combined camera/gallery upload -->
-    <button id="upload-options-button" onclick="showUploadOptions()">
-      <img src="Images/upload-icon.png" alt="Upload Icon">
-      <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
-    </button>
-    <!-- Camera and Gallery buttons -->
-    <button id="camera-input-button" onclick="captureFromCamera()">
-      <img src="Images/camera-icon.png" alt="Camera Icon">
-    </button>
-    <button id="gallery-input-button" onclick="selectFromGallery()">
-      <img src="Images/gallery-icon.png" alt="Gallery Icon">
-    </button>
+
+
+
+
+    <div class="buttons">
+      <!-- New button for combined camera/gallery upload -->
+      <button id="recommendation-button" onclick="getRecommendation()">Get Recommendation</button>
+      <button id="voice-input-button" onclick="startVoiceInput()">Voice Input</button>
+
+      <button id="upload-options-button" onclick="showUploadOptions()">
+        <img src="Images/upload-icon.png" alt="Upload Icon">
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+      </button>
+
+      <!-- Camera and Gallery buttons -->
+      <button id="camera-input-button" onclick="captureFromCamera()">
+        <img src="Images/camera-icon.png" alt="Camera Icon">
+      </button>
+
+      <button id="gallery-input-button" onclick="selectFromGallery()">
+        <img src="Images/gallery-icon.png" alt="Gallery Icon">
+      </button>
+
+    </div>
+
+
     <p id="recommendation-result"></p>
     <div id="loading-animation">Analyzing Image...</div>
   </div>
 
   <div class="popup-container" id="popupContainer">
     <div class="popup">
-        <span class="close" onclick="closePopup()">&times;</span>
-        <p>In case of Emergency. Click 'OK' to use Emergency Service</p>
-        <button id="OK-button" onclick="redirect()">OK</button>
+      <span class="close" onclick="closePopup()">&times;</span>
+      <p>In case of Emergency. Click 'OK' to use Emergency Service</p>
+      <button id="OK-button" onclick="redirect()">OK</button>
     </div>
-</div>
+  </div>
 
-<div>Chekking Chekking</div>
+  <!-- <div class="our_department_area">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="section_title text-center mb-55">
+            <h3>Our Departments</h3>
+            <p>Esteem spirit temper too say adieus who direct esteem. <br>
+              It esteems luckily or picture placing drawing. </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-4 col-md-6 col-lg-4">
+          <div class="single_department">
+            <div class="department_thumb">
+              <img src="img/department/1.png" alt="">
+            </div>
+            <div class="department_content">
+              <h3><a href="#">Eye Care</a></h3>
+              <p>Esteem spirit temper too say adieus who direct esteem.</p>
+              <a href="#" class="learn_more">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6 col-lg-4">
+          <div class="single_department">
+            <div class="department_thumb">
+              <img src="img/department/2.png" alt="">
+            </div>
+            <div class="department_content">
+              <h3><a href="#">Physical Therapy</a></h3>
+              <p>Esteem spirit temper too say adieus who direct esteem.</p>
+              <a href="#" class="learn_more">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6 col-lg-4">
+          <div class="single_department">
+            <div class="department_thumb">
+              <img src="img/department/3.png" alt="">
+            </div>
+            <div class="department_content">
+              <h3><a href="#">Dental Care</a></h3>
+              <p>Esteem spirit temper too say adieus who direct esteem.</p>
+              <a href="#" class="learn_more">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6 col-lg-4">
+          <div class="single_department">
+            <div class="department_thumb">
+              <img src="img/department/4.png" alt="">
+            </div>
+            <div class="department_content">
+              <h3><a href="#">Diagnostic Test</a></h3>
+              <p>Esteem spirit temper too say adieus who direct esteem.</p>
+              <a href="#" class="learn_more">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6 col-lg-4">
+          <div class="single_department">
+            <div class="department_thumb">
+              <img src="img/department/5.png" alt="">
+            </div>
+            <div class="department_content">
+              <h3><a href="#">Skin Surgery</a></h3>
+              <p>Esteem spirit temper too say adieus who direct esteem.</p>
+              <a href="#" class="learn_more">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6 col-lg-4">
+          <div class="single_department">
+            <div class="department_thumb">
+              <img src="img/department/6.png" alt="">
+            </div>
+            <div class="department_content">
+              <h3><a href="#">Surgery Service</a></h3>
+              <p>Esteem spirit temper too say adieus who direct esteem.</p>
+              <a href="#" class="learn_more">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
   <script src="script.js"></script>
 </body>
+
 </html>
